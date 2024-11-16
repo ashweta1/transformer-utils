@@ -24,13 +24,9 @@ def fix_config_with_missing_model_type(model_name, config_path):
 
 
 def get_local_path_from_huggingface_cdn(key, filename):
-    archive_file = transformers.file_utils.hf_bucket_url(
-        key,
+    resolved_archive_file = huggingface_hub.hf_hub_download(
+        repo_id=key,
         filename=filename,
-    )
-
-    resolved_archive_file = transformers.file_utils.cached_path(
-        archive_file,
     )
     return resolved_archive_file
 
