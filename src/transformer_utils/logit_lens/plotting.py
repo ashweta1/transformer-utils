@@ -150,7 +150,7 @@ def _plot_logit_lens(
     ax_top = ax.twiny()
 
     padw = 0.5 / to_show.shape[1]
-    ax_top.set_xticks(np.linspace(padw, 1 - padw, to_show.shape[1]))
+    ax_top.set_xticks(np.linspace(padw, 1 - padw, to_show.shape[1]-1))
 
     ax_inputs = ax
     ax_targets = ax_top
