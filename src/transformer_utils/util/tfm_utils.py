@@ -1,6 +1,6 @@
 import json
 
-import transformers.file_utils
+import huggingface_hub
 from transformers.models.auto.configuration_auto import CONFIG_MAPPING
 
 
