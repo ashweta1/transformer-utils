@@ -161,6 +161,8 @@ def _plot_logit_lens(
         ax_targets = ax
 
     ax_inputs.set_xticklabels(input_tokens_str[start_ix:end_ix], rotation=0)
+    print("xticks size: ", to_show.shape[1])
+    print("xticklabels: ", input_tokens_str[start_ix:end_ix])
 
     starred = [
         "* " + true if pred == true else " " + true
